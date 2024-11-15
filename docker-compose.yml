@@ -1,0 +1,37 @@
+
+services:
+  app:
+    build: .
+    container_name: laravel_app
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_CONNECTION=sqlite
+
+  webserver:
+    image: nginx:latest
+    container_name: laravel_nginx
+    depends_on:
+      - app
+    volumes:
+      - .:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "8000:80"
+
+  redis:
+    image: redis:alpine
+    container_name: laravel_redis
+    ports:
+      - "6379:6379"
+
+  node:
+    image: node:lts
+    container_name: laravel_node
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: ["npm", "install"]
