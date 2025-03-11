@@ -11,7 +11,14 @@ This repository explores the intersection of [OpenUI5] and [Laravel], diving int
 **Why Experiments?**  
 Adopting an experimental mindset fosters curiosity, encourages breaking down complex problems, and opens the door to discovering innovative solutions. Whether integrating SAP frameworks into Laravel, exploring containerized environments, or testing new development paradigms, each experiment is a step toward mastering cutting-edge technologies.
 
+- [Experiment 1]–Dashboard w/SAP UI Integration Cards
+- [Experiment 2]–Minimal Laravel Multi-Tenancy (external project)
+- [Experiment 3]–Hybrid HTML Page w/OpenUi5 & Livewire
 
 [OpenUI5]: https://sdk.openui5.org/
 [Laravel]: https://laravel.com/
 [SAP UI Integration Cards]: https://pragmatiqu.io/archive/2024/11/12
+
+[Experiment 1]: https://github.com/pragmatiqu/experiments/tree/cards
+[Experiment 2]: https://github.com/pragmatiqu/nopm
+[Experiment 3]: https://github.com/pragmatiqu/experiments/tree/hybrid
